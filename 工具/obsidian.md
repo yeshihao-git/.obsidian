@@ -1,6 +1,6 @@
 # 基础
 - 二级列表：在一级列表行按 **回车 (Enter)** 产生新行后，按下 **`Tab`** 键
-- 标签：#标签内容
+- 标签：`#标签内容`
 
 
 ## 链接
@@ -38,3 +38,20 @@
 4. 社区插件市场 - `Clear Unused Images`
 5. 在命令面板使用
 
+# 给表格加上横向滑动条
+设置 - 外观 - CSS代码片段
+![[Pasted image 20260416105633.png]]
+选择文件夹，新建 css 文件，写入以下内容
+```css
+.markdown-source-view div.cm-embed-block.cm-table-widget {
+    overflow-x: auto;
+}
+.markdown-source-view div.cm-embed-block.cm-table-widget > div > table {
+    width: max-content !important;
+}
+.markdown-reading-view .markdown-preview-view.markdown-rendered table {
+    width: max-content !important;
+}
+```
+
+开启 table-scroll 后刷新

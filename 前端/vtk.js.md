@@ -31,3 +31,43 @@
 | `.vtp` | VTK PolyData XML         | 多边形数据  | 多边形数据（**点、线、面、三角网格**） |
 | `.vtu` | VTK UnstructuredGrid XML | 非结构化网格 | 非结构化网格                |
 
+# 4. 问题解决
+## 4.1 fix：模型旋转中心不在模型中心
+
+> 问题背景：模型围绕着模型底部旋转
+
+**vtk.js 中的三个中心**：
+1. camera.focalPoint 是相机焦点，说明相机看向的位置
+2. actor.setOrigin 是模型自身的旋转中心
+3. interactorStyle.setCenterOfRotation 是交互旋转中心，控制世界围哪个点转
+
+**解决**：计算模型的包围盒中心后，设置为交互器的旋转中心
+```js
+// 获取交互器
+const interactor = renderWindow.getInteractor();
+
+if (interactor) {
+  interactor.setEnabled(true);
+}
+
+// 计算包围盒中心
+const bounds = surfaceData.getBounds();
+
+const center = [
+  (bounds[0] + bounds[1]) / 2,
+  (bounds[2] + bounds[3]) / 2,
+  (bounds[4] + bounds[5]) / 2
+];
+
+// 重置相机
+// 1. 自动计算模型包围盒：找到场景里所有模型的最小 / 最坐标
+// 2. 自动设置相机焦点：focalPoint：让相机看向模型中心。
+// 3. 自动设置相机位置：position：让相机退到合适距离，保证整个模型完整显示在画面里
+renderer.resetCamera();
+
+// 设置交互器旋转中心
+const interactorStyle = interactor.getInteractorStyle();
+interactorStyle.setCenterOfRotation(...center);
+
+renderWindow.render();
+```
