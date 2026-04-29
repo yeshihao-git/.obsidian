@@ -1,8 +1,13 @@
-# 组件间传数据
+# 1. 关键特性
+## 1.1 组件间传数据（props、emit）
 
 - `props`：父 → 子
 - `emit`：子 → 父
 `props` 和 `emit` 都是在【子组件】里声明、定义的，父组件只是 “传值 / 监听”
+
+## 1.2 单文件组件（SFC）
+
+
 
 # `<script>`+export default 和 `<script setup>` 区别
 

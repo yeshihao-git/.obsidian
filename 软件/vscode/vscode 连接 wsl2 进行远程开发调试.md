@@ -552,6 +552,7 @@ cmake --build build
             "request": "launch",
             "url": "http://localhost:5173",
             "webRoot": "${workspaceFolder}",
+            "sourceMaps": true,
             "sourceMapPathOverrides": {
                 "webpack:///src/*": "${webRoot}/src/*"
             }

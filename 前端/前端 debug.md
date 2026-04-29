@@ -1,8 +1,10 @@
 # 1. 使用 vscode debug vue.js 代码
-1. 下载插件
+1. chrome 下载 Vue DevTools 插件
+
+2. 下载 vscode 插件
 ![[Pasted image 20260423134301.png]]
 
-2. 在 vite.config.js 开启 SourceMap
+3. 在 vite.config.js 开启 SourceMap
 ```js
 export default defineConfig( ( { mode } ) => {
   return {
@@ -14,7 +16,7 @@ export default defineConfig( ( { mode } ) => {
 } );
 ```
 
-3. 编写 launch.json
+4. 编写 launch.json
 ```js
 {
   // 调试配置列表（当前生效的配置）
@@ -25,6 +27,7 @@ export default defineConfig( ( { mode } ) => {
       "type": "chrome",                     // 调试类型：调试Chrome浏览器
       "url": "http://10.8.254.124:5173",     // 调试时自动打开的项目地址
       "webRoot": "${workspaceFolder}",      // 项目源码根目录（VSCode打开的文件夹）
+      "sourceMaps": true,
       
       // 源码路径映射：让VS Code正确找到本地src文件
       "sourceMapPathOverrides": {
@@ -35,6 +38,6 @@ export default defineConfig( ( { mode } ) => {
 }
 ```
 
-4. 通过 npm run dev 启动后，即可使用 vscode 进行 debug
+5. 通过 npm run dev 启动后，即可使用 vscode 进行 debug
 
 > **SourceMap**：打包压缩后的代码 <---映射---> 原始源码，用于调试
