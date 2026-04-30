@@ -597,14 +597,21 @@ cmake --build build
 set(CMAKE_BUILD_TYPE Debug)
 ```
 
-3. 在 `Java` 和 `C++` 相关位置打断点，先启动 `Vue` 前端
+3. 在终端中输出以下命令
+```bash
+# attach 到 C++ 代码，需要权限，使用以下方式临时开启
+sudo sysctl -w kernel.yama.ptrace_scope=0
+# 作用：临时关闭 Linux 的 ptrace 安全限制，允许普通进程随意附加、调试、读取其他进程内存
+```
+
+4. 在 `Java` 和 `C++` 相关位置打断点，先启动 `Vue` 前端
    再启动 `Java` 调试器
    ![[Pasted image 20260424103648.png|144]]
    最后启动 `C++` 调试器 附加到 `Java` 进程
    ![[Pasted image 20260424103849.png|143]]
    ![[Pasted image 20260424103933.png|454]]
 
-4. 最终效果：实现一个 vscode 窗口同时调试 Java、C++ 代码
+5. 最终效果：实现一个 vscode 窗口同时调试 Java、C++ 代码
    ![[Pasted image 20260424104217.png|329]] 
 
 

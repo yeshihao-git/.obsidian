@@ -76,15 +76,20 @@
 
 ### 2026.4.28
 - [x] learn：InteVue 源码（debug 方式精看）
-      1. 完成笔记：[[三维旋转（欧拉角、矩阵旋转、四元数）]]
-      2. 看完业务逻辑：视图、渲染
+	- [x] 完成笔记：[[三维旋转（欧拉角、矩阵旋转、四元数）]]
+	- [x] 看完业务逻辑：视图、渲染
 
 ### 2026.4.29
-- [ ] learn：InteVue 源码（debug 方式精看）
-      1. 完成笔记：[[相机]] [[vue.js]]
-      2. 看完业务逻辑：透视图、批注、测量
+- [x] learn：InteVue 源码（debug 方式精看）
+	- [x] 完成笔记：[[相机]] [[vue.js]]
+	- [x] 看完业务逻辑：透视图、批注
+- [x] env：下载 hyperworks
+- [x] learn：研究 hyperworks --- [[CAE]]
 
 ### 2026.4.30
+- [x] ==feat==：研究 hyperworks ---  导出 csv（google：hyperworks export data）
+- [ ] learn：InteVue 源码（debug 方式精看）
+	- [ ] 看三层渲染逻辑：文档层 InteVueDocument、视图层 InteWebVue、控制层 WebCtrlView
 
 # 待定
 - [ ] feat：将自己的代码跑起来 --- 2
