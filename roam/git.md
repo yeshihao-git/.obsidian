@@ -1,5 +1,9 @@
-#tools
+---
+tags:
+  - tools
+---
 # github 历史版本回退
+
 ```bash
 git reset --hard <commit id>
 git push -f
@@ -12,12 +16,10 @@ git push -f
 ```bash
 git rm -r --cached <文件夹> # 若是文件不需要 -r
 ```
-
 2. 在 .gitignore 中写入忽略规则
 ```bash
 # .gitignore
 <文件>
 <文件夹>/
 ```
-
 3. git commit

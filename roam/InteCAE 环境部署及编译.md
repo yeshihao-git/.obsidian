@@ -1,4 +1,7 @@
-#工作
+---
+tags:
+  - 工作
+---
 # PSCAD Assembly Module
 
 PSCAD 装配模块：提供 C++ 核心引擎、Java WebSocket 服务。

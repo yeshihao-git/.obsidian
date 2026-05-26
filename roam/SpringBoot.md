@@ -1,4 +1,7 @@
-#java
+---
+tags:
+  - java
+---
 # 1. SpringBoot 核心概念
 
 | 概念             | 类比 C++        | 说明                                 |
@@ -10,6 +13,7 @@
 
 # 2. SpringBoot 常用注解
 ## 2.1 SpringBoot 启动总注解
+
 | 注解                       | 作用             | 内部三合一本质                                                                                 |
 | ------------------------ | -------------- | --------------------------------------------------------------------------------------- |
 | `@SpringBootApplication` | springboot启动入口 | 1.`@Configuration`配置<br>2.`@ComponentScan`自动扫包造Bean<br>3.`@EnableAutoConfiguration`自动配置 |
@@ -32,6 +36,7 @@
 | `@Configuration` | 配置类注解 | 标记当前类是配置类，配合`@Bean`使用  |
 
 ## 2.4 Web接口专用注解
+
 | 注解                | 作用                                             |
 | ----------------- | ---------------------------------------------- |
 | `@RestController` | 接口控制器（返回JSON）= `@Controller` + `@ResponseBody` |
@@ -41,6 +46,7 @@
 | `@PostMapping`    | POST请求接口                                       |
 
 ## 2.5 如何使用？
+
 ```
 启动用 @SpringBootApplication
 配置用 @Configuration + @Bean
@@ -69,6 +75,7 @@ WebSocket 用 @ServerEndpoint + @OnMessage
 | `common`                      | 公共模块   | 公共常量、枚举、通用类                 |
 
 # 4. target 文件夹中有什么？
+
 **target 文件夹**：Spring Boot / Maven 项目里自动生成的 编译产物输出目录。包含以下内容：
 1. 最终可运行的 jar 包
 ```

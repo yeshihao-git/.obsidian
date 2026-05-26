@@ -1,5 +1,9 @@
-#cpp
+---
+tags:
+  - cpp
+---
 # 1 VTK 渲染管线 流程
+
 本节介绍 VTK 中最核心的渲染管线流程：从数据处理到可视化的完整流程及各个环节涉及的组件。
 ![[Pasted image 20260409182138.png]]
 
@@ -17,10 +21,12 @@
 ## 2.1 VTK 内部索引
 
 # 3 了解 VTK 支持的文件格式以及对应 Reader
+
 本节介绍 VTK 中常用的格式，包括：VTK 原生格式、部分外部数据格式；
 其次介绍对应的 Reader，在 VTK（C++）中 Reader 类的命名通常遵循 `vtk[格式名]Reader`。
 
 ## 3.1 VTK 原生格式
+
 VTK 原生格式是 VTK 自有的专用格式，性能和功能最佳。可以分为：
 1. Legacy：老牌，不支持并行IO，对大规模数据集的加载速度较慢
 2. XML：主流，支持**随机访问**、**块压缩**、**并行IO**
@@ -50,24 +56,34 @@ VTK XML 文件可从两个维度划分：
 | PRectilinearGrid             | .pvtr | 并行、结构化  | `vtkXMLPRectilinearGridReader`  |
 | PStructuredGrid              | .pvts | 并行、结构化  | `vtkXMLPStructuredGridReader`   |
 | PUnstructuredGrid            | .pvtu | 并行、非结构化 | `vtkXMLPUnstructuredGridReader` |
+
 ### 3.1.1 VTK 原生格式可视化示例
 #### ImageData
+
 点的排列是 X/Y/Z 轴等间距排列（2D时，X/Y 轴等间距排列）的矩阵栅格；
 由 **体素（立方体）** 组成。
 ![[Pasted image 20260415154608.png|455]]
+
 #### PolyData
+
 点的排列任意散布，主要用于表面，无坐标概念；
 由 **点、线、三角形、四边形、多边形** 组成。
 ![[Pasted image 20260415154632.png|463]]
+
 #### RectilinearGrid
+
 点的排列是 X/Y/Z 轴不等间距的矩阵栅格；
 由 **长方体** 组成。
 ![[Pasted image 20260415154649.png|469]]
+
 #### StructuredGrid
+
 点的排布是矩阵阵列，但点坐标可任意；
 由 **曲面六面体** 组成。
 ![[Pasted image 20260415154705.png|478]]
+
 #### UnstructuredGrid
+
 点的排布是任意散布的，无坐标轴概念；
 由 **四面体、金字塔 等** 组成。
 ![[Pasted image 20260415154713.png|474]]
@@ -77,6 +93,7 @@ VTK XML 文件可从两个维度划分：
 **参考**：[VTK XML file formats](https://docs.vtk.org/en/latest/vtk_file_formats/vtkxml_file_format.html#)
 
 ## 3.2 外部数据格式
+
 外部数据格式是外部软件生成的通用或专用的数据格式，用于数据交换。
 
 | 类型             | 扩展名    | 对应的Reader      |
@@ -86,9 +103,11 @@ VTK XML 文件可从两个维度划分：
 | OBJ（Wavefront） | `.obj` | `vtkOBJReader` |
 
 # 4 快速开始
+
 本节通过一个剖切代码示例，来介绍 VTK 渲染管线流程、reader、剖切、切面等内容。
 
 ## 4.1 3.1项目结构
+
 ```
 .
 ├── CMakeLists.txt
@@ -96,6 +115,7 @@ VTK XML 文件可从两个维度划分：
 ```
 
 ## 4.2 编写 CMakeLists.txt 
+
 ```cmake
 # 1. 指定CMake最低版本要求
 cmake_minimum_required(VERSION 3.12 FATAL_ERROR)
@@ -147,6 +167,7 @@ vtk_module_autoinit(
 ```
 
 ## 4.3 编写代码
+
 ```C++
 // CapClip.cxx 文件
 
@@ -347,6 +368,7 @@ vtkSmartPointer<vtkPolyData> ReadPolyData(std::string const& fileName)
 ```
 
 ## 4.4 编译运行
+
 ```bash
 cmake -B build -G Ninja
 cmake --build build
@@ -361,6 +383,7 @@ cmake --build build
 **参考**：[vtk-examples CapClip](https://examples.vtk.org/site/Cxx/Meshes/CapClip/#download-and-build-capclip)
 
 # 5 常用 API 接口说明
+
 本节只介绍 VTK 中最核心的 API（其余根据需求查找 [vtk-examples](https://examples.vtk.org/site/Cxx/) 和 [vtk reference](https://vtk.org/doc/nightly/html/classes.html)）
 
 **渲染管线流程相关**

@@ -1,12 +1,18 @@
-#vscode
+---
+tags:
+  - tools
+  - vscode
+---
 # 1 环境搭建
 ## 1.1 配置 windows 功能
+
 1. 配置 `windows` 功能
 ![[Pasted image 20260410103334.png|697]]
 
 2. 重启生效
 
 ## 1.2 安装 wsl2 和 ubuntu22.04
+
 1. 命令行中输入以下命令
 ```powershell
 # 1. 更新 WSL2（自动下载并安装最新的 WSL2）
@@ -20,6 +26,7 @@ wsl --install -d Ubuntu-22.04
 ```
 
 ## 1.3 vscode 远程连接 wsl
+
 1. 安装 `WSL` 插件  
 ![[Pasted image 20260410103847.png]]
 
@@ -42,6 +49,7 @@ code
 
 # 2 编译调试 C++ 代码
 ## 2.1 前置条件
+
 0. 项目结构
 ```
 .
@@ -112,6 +120,7 @@ target_link_libraries(hello_qt Qt5::Core Qt5::Widgets) # 将 Qt5 的 Core 和 Wi
 
 ### 2.2.1 使用 命令行 编译
 #### 方式1：gcc
+
 1. 使用 `gcc` 进行编译
 ``` bash
 g++ -fPIC main.cpp -o qt-test \ 
@@ -152,6 +161,7 @@ g++ -std=<C++标准> -g <源文件路径> -o <可执行文件路径> \
 > **PIE（Position-Independent Executable）**：位置无关可执行文件，一种安全机制，让程序每次加载到内存的位置都不一样。若要生成 `PIE` 程序，则所有代码必须是位置无关（`PIC`）。现代64位 `linux` 全部默认开启 `PIE`。
 
 #### 方法2：cmake
+
 1. 使用 `cmake` 命令行工具进行构建、运行
 ```bash
 cd <项目目录>
@@ -168,6 +178,7 @@ cmake --build build
 
 ### 2.2.2 使用 vscode 编译
 #### 方式1：gcc
+
 1. 配置 `IntelliSence`：`Ctrl +Shift + p` 打开命令面板  
 ![[Pasted image 20260410142041.png|449]]  
 在包含路径中输入头文件路径  
@@ -189,6 +200,7 @@ cmake --build build
 > **c_cpp_properties.json**：`C++` 编辑配置文件（配置 `IntelliSence`时的相关信息就在这里）
 
 #### 方式2：cmake
+
 ![[Pasted image 20260413102707.png]]  
 点击左侧边栏 `CMake` 图标后，即可进行配置、生成、测试、调试、启动等操作。
 
@@ -196,6 +208,7 @@ cmake --build build
 
 ## 2.3 调试 C++ 代码
 ### 2.3.1 使用 命令行 调试
+
 1. 配置调试信息、优化级别： `gcc` 中增加 `-g` 、`-O0` 选项
 
 2. 使用 `gdb` 进行调试
@@ -239,6 +252,7 @@ q
 > **core dump**：`core dump` 文件为程序崩溃时的内存快照，用于分析程序崩溃原因
 
 ### 2.3.2 使用 vscode 调试
+
 `vscode` 新版 `C/C++` 插件无需手写 `launch.json` 就能一键调试了
 ![[Pasted image 20260410155840.png]]
 1. 打断点
@@ -259,6 +273,7 @@ q
 
 # 3 编译调试 Java 代码
 ## 3.1 使用 vscode 编译调试
+
 1. `vscode` 中安装 `Java` 相关插件  
 ![[Pasted image 20260413111521.png]]  
 
@@ -287,6 +302,7 @@ q
 
 # 4 Java 调用 C++ 动态库
 ## 4.1 方法1：通过 JNI 调用 C++ 代码
+
 1. 创建带有 `native` 方法的 `Java` 类
 ```java
 // HelloWorldJNI.java 
@@ -351,6 +367,7 @@ g++ -shared -fPIC -o libnative.so com_baeldung_jni_HelloWorldJNI.o -lc
 
 ## 4.2 方法2：通过 SWIG 调用 C++ 代码
 ### 4.2.1 前置条件
+
 0. 项目结构
 ```
 .
@@ -418,6 +435,7 @@ extern char *get_time();
 
 ### 4.2.2 使用 命令行 编译
 #### 方法1：gcc
+
 ```bash
 # 1. 生成 JNI 包装代码
 swig -java -c++ example.i
@@ -442,6 +460,7 @@ java -Djava.library.path=. main
 **参考**：[SWIG Basics](https://www.swig.org/Doc4.4/SWIGDocumentation.html#SWIG) 
 
 #### 方法2：cmake
+
 1. 编写 `CMakeLists.txt` 
 ```cmake
 # 1. 指定 cmake 版本
@@ -515,13 +534,16 @@ cmake --build build
 
 ### 4.2.3 使用 vscode 编译
 #### 方法1：gcc
+
 不推荐，略  
 
 #### 方法2：cmake
+
 基于 [[#4.2.1 环境配置和示例代码]] 中的 `CMakeLists.txt`，在 `vscode` 中点击左侧 `CMake` 后，选择 生成 即可  
 ![[Pasted image 20260414115351.png]]
 
 # 5 调试 vue 代码
+
 1. chrome 下载 Vue DevTools 插件
 
 2. 下载 vscode 插件
@@ -566,6 +588,7 @@ export default defineConfig( ( { mode } ) => {
 > **SourceMap**：打包压缩后的代码 <---映射---> 原始源码，用于调试
 
 # 6 调试 C++ 动态库（一个综合联调示例）
+
 本节介绍的项目流程为：用户上传 `.fem` 模型文件到 `Vue` 前端 ，`Vue` 前端传给 `Java` 后端，`Java` 后端调用 `C++` 数据处理模块生成 `.vtp` 文件返回给 `Java` 后端，`Java` 后端返回给 `Vue` 前端并显示。项目结构如下：
 ```bash
 .
@@ -661,6 +684,7 @@ sudo sysctl -w kernel.yama.ptrace_scope=0
 
 
 # 7 番外篇：使用 Trae 调试 C++
+
 1. 命令行中安装 lldb
 ```bash
 sudo apt update 

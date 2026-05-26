@@ -71,16 +71,6 @@
             }
           },
           {
-            "id": "4421236c51d7ac39",
-            "type": "leaf",
-            "state": {
-              "type": "bookmarks",
-              "state": {},
-              "icon": "lucide-bookmark",
-              "title": "书签"
-            }
-          },
-          {
             "id": "a80cd892efffb712",
             "type": "leaf",
             "state": {
@@ -89,9 +79,19 @@
               "icon": "git-pull-request",
               "title": "Source Control"
             }
+          },
+          {
+            "id": "4421236c51d7ac39",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -127,7 +127,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#操作系统",
+                "query": "tag:#vue",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -136,20 +136,6 @@
               },
               "icon": "lucide-search",
               "title": "搜索"
-            }
-          },
-          {
-            "id": "96ae318530090842",
-            "type": "leaf",
-            "state": {
-              "type": "all-properties",
-              "state": {
-                "sortOrder": "frequency",
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-archive",
-              "title": "添加笔记属性"
             }
           },
           {
@@ -208,33 +194,33 @@
   },
   "active": "a80cd892efffb712",
   "lastOpenFiles": [
-    "roam/值分类.md",
-    "plan.md",
-    "roam/工厂模式.md",
-    "roam/IO 模型.md",
-    "roam/test.md",
-    "roam/单例模式.md",
-    "roam/工作相关信息.md",
-    "roam/InteVue 理解.md",
-    "roam/InteCAE 环境部署及编译.md",
-    "roam/场景树.md",
-    "roam/assets/Pasted image 20260422103251.png",
-    "roam/图形学应用.md",
-    "roam/相机.md",
-    "roam/图形学渲染管线（MVP、视口变换）.md",
-    "roam/三维旋转（欧拉角、矩阵旋转、四元数）.md",
-    "roam/空间数据结构.md",
-    "roam/分层渲染.md",
-    "roam/组合模式.md",
-    "roam/数据传输方式.md",
+    "roam/vue.js.md",
+    "roam/vscode 连接 wsl2 进行远程开发调试.md",
+    "roam/vscode.md",
+    "roam/vim.md",
+    "roam/powershell.md",
+    "roam/obsidian.md",
+    "roam/git.md",
+    "roam/cmake.md",
+    "roam/clash.md",
+    "roam/IP.md",
+    "roam/属性系统.md",
+    "roam/内核空间、用户空间.md",
+    "roam/元对象系统.md",
+    "roam/信号槽.md",
+    "roam/事件系统.md",
+    "roam/模型视图编程.md",
+    "roam/布局管理.md",
+    "roam/mysql 锁.md",
+    "roam/mysql 索引.md",
+    "roam/mysql 事务.md",
+    "roam/mysql 日志.md",
+    "roam/mysql 查询流程.md",
     "roam/MIME类型.md",
-    "roam/LocalTime、UTC、OffsetFromUTC、TimeZone 概念详解.md",
-    "roam/行终止符.md",
-    "roam/负载均衡算法.md",
-    "roam/socket编程.md",
-    "roam/虚拟内存.md",
-    "roam/文件系统.md",
-    "roam/文件传输.md",
+    "roam/vtk.js.md",
+    "roam/javascript.md",
+    "roam/SWIG.md",
+    "roam/assets/Pasted image 20260422103251.png",
     "roam/assets/Pasted image 20260520132209.png",
     "roam/assets/Pasted image 20260519141834.png",
     "roam/assets/Pasted image 20260520185336.png",

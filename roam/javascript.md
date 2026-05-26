@@ -1,10 +1,15 @@
-#js
+---
+tags:
+  - js
+---
 # JavaScript 是单线程的
+
 `JavaScript` 本身是单线程，但运行环境是多线程。  
 
 `JavaScript` 本身只有一个主线程， **但浏览器 / Node 不是单线程**（定时器、网络请求、`IO`、渲染、`Worker` 都是别的线程）它们干完活，把**结果丢到任务队列**，等主线程空了，再回来执行回调。
 
 # JSX 和 TSX 之间的区别
+
 - 写 `JavaScript` 且用 `HTML` 语法 → `.jsx`
 ```jsx
 function App() {
@@ -26,6 +31,7 @@ function App(props: Props) {
 - `vue3` 完全支持 `JSX / TSX`
 
 # 开发、打包、部署、发布
+
 1. **开发**：编写源代码
 
 2. **打包（build / package）**： 源代码 → 浏览器能直接运行的代码，放入`dist` 文件夹

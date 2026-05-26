@@ -1,4 +1,9 @@
-#未分类
+---
+tags:
+  - 未分类
+---
+# MIME类型
+
 **what**：
 HTTP 报文头 Content-Type 的值是 MIME 类型（Multipurpose Internet Mail Extensions）
 

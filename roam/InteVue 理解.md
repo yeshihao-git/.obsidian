@@ -1,5 +1,9 @@
-#工作
+---
+tags:
+  - 工作
+---
 # Render
+
 ScenMeshArray：用于 `Mesh` 排序与渲染量管理，解决 大规模3D模型的渲染性能问题 
 ```
 ┌──────────────────────────────────────────────────────────────┐
@@ -72,6 +76,7 @@ TYWebGLRenderer.js
 ```
 
 # MarkUp
+
 三个图层负责将批注/测量对象渲染到不同空间
 ```
 ┌─────────────────────────────────────────────────────────┐
@@ -96,6 +101,7 @@ TYWebGLRenderer.js
 ```
 
 # Command
+
 实现了一套完整的 命令模式（Command Pattern） ，核心设计为：
 CommandObject基类 （run/undo/redo接口） → 50+具体命令 （各自记录状态快照） → CommandManager （工厂创建 + 四栈undo/redo管理）
 
@@ -112,6 +118,7 @@ InteVueDocument 中持有 InteWebVue 和 CommandManager，InteWebVue 中持有 W
 
 
 # 三维旋转
+
 前视图中的实现方式为使用**四元数**进行三维旋转，CommandChangeView.js 行：153 - 160
 ```
 pos    = 当前相机朝向方向（归一化）
