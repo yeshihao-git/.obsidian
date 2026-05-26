@@ -9,5 +9,6 @@
   "readableLineLength": true,
   "trashOption": "local",
   "newFileLocation": "folder",
-  "newFileFolderPath": "roam"
+  "newFileFolderPath": "roam",
+  "vimMode": false
 }

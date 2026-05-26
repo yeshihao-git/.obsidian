@@ -13,10 +13,10 @@ kanban-plugin: board
 	- [ ] 提交 答辩记录与学位授予决议 和 修改落实情况
 	- [ ] 论文查重查ai查格式，提交
 	- [ ] 论文打印胶装？
-- [ ] 搬、邮寄、卖东西
 - [ ] 迁移 emacs 笔记到 obsidian
 	- [ ] grpc
 	- [ ] asio
+- [ ] 搬、邮寄、卖东西
 - [ ] obsidian导出没有空行问题
 - [ ] obsidian的列表前有空白问题
 - [ ] docs：颜色空间（RGB、HSV、HSL）、HSV转RGB

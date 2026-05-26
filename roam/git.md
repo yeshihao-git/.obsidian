@@ -36,7 +36,7 @@ git rebase -i HEAD~2  # HEAD~2 表示：从最新 commit 往前数 2 个
 pick a1b2c3d 第一个提交信息
 pick e4f5g6h 第二个提交信息
 ```
-3. 把第二个 commit 前面的 `pick` 改成 `s` 或 `squash`**
+3. 把第二个 commit 前面的 `pick` 改成 `s` 或 `squash`
 ```bash
 pick a1b2c3d 第一个提交信息
 squash e4f5g6h 第二个提交信息 # squash = 把这个 commit 合并到上一个
