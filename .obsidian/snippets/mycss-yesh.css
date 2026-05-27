@@ -1,0 +1,10 @@
+/* 表格横向滚动 */
+.markdown-source-view div.cm-embed-block.cm-table-widget {
+    overflow-x: auto;
+}
+.markdown-source-view div.cm-embed-block.cm-table-widget > div > table {
+    width: max-content !important;
+}
+.markdown-reading-view .markdown-preview-view.markdown-rendered table {
+    width: max-content !important;
+}

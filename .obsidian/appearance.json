@@ -1,5 +1,7 @@
 {
   "enabledCssSnippets": [
-    "table-scroll"
-  ]
+    "table-scroll",
+    "mycss-yesh"
+  ],
+  "accentColor": "#5ca6f5"
 }

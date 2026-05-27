@@ -96,5 +96,14 @@
     }
   ],
   "editor:toggle-italics": [],
-  "editor:insert-link": []
+  "editor:insert-link": [],
+  "workspace:new-tab": [],
+  "quickadd:choice:2c103e2e-e525-49e3-81a6-35b8e1dd51e7": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "T"
+    }
+  ]
 }

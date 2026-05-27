@@ -81,7 +81,25 @@ tags:
 %%<内容>%%          // 注释
 `<代码>`            // 代码块
 >                   // 引用
+
+// 提示框     
+>[!<CallOut>]-      // - 可选，用于折叠
+>>                  // 提示框中多层嵌套
 ```
+
+**CallOut 官方支持如下**：
+- note
+- abstract, summary, tldr
+- info, todo
+- tip, hint, important
+- success, check, done
+- question, help, faq
+- warning, caution, attention
+- failure, fail, missing
+- danger, error
+- bug
+- example
+- quote, cite
 
 ## 3.3 内部链接
 
@@ -96,9 +114,14 @@ tags:
 
 ## 3.4 笔记属性
 
+设置 - 编辑器 - 笔记属性 -> 显示
 ```cpp
 ---       // 文件开头添加笔记属性
 ```
+
+## 3.5 自定义 CSS 样式
+
+`ctrl + shift + i` 
 
 # 4 关系图谱与笔记联动
 
