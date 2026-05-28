@@ -87,14 +87,7 @@
       "key": "O"
     }
   ],
-  "obsidian-another-quick-switcher:grep": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "R"
-    }
-  ],
+  "obsidian-another-quick-switcher:grep": [],
   "editor:toggle-italics": [],
   "editor:insert-link": [],
   "workspace:new-tab": [],
@@ -104,6 +97,16 @@
         "Mod"
       ],
       "key": "T"
+    }
+  ],
+  "graph:open": [],
+  "app:delete-file": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "D"
     }
   ]
 }

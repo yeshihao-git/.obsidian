@@ -94,12 +94,29 @@
           "modifiers": [
             "Mod"
           ],
-          "key": ","
+          "key": ";",
+          "hideHotkeyGuide": true
         }
       ],
       "toggle auto preview": [],
-      "scroll preview up": [],
-      "scroll preview down": [],
+      "scroll preview up": [
+        {
+          "modifiers": [
+            "Alt"
+          ],
+          "key": "v",
+          "hideHotkeyGuide": false
+        }
+      ],
+      "scroll preview down": [
+        {
+          "modifiers": [
+            "Mod"
+          ],
+          "key": "v",
+          "hideHotkeyGuide": false
+        }
+      ],
       "create": [
         {
           "modifiers": [
@@ -130,7 +147,15 @@
       ],
       "create in new popup": [],
       "open in default app": [],
-      "show in system explorer": [],
+      "show in system explorer": [
+        {
+          "modifiers": [
+            "Mod"
+          ],
+          "key": "e",
+          "hideHotkeyGuide": false
+        }
+      ],
       "open in google": [
         {
           "modifiers": [
@@ -203,7 +228,15 @@
       "close if opened": [],
       "copy file vault path": [],
       "copy absolute file path": [],
-      "launch grep": [],
+      "launch grep": [
+        {
+          "modifiers": [
+            "Mod"
+          ],
+          "key": "r",
+          "hideHotkeyGuide": false
+        }
+      ],
       "dismiss": [
         {
           "modifiers": [
@@ -677,11 +710,28 @@
           "modifiers": [
             "Mod"
           ],
-          "key": ","
+          "key": ";",
+          "hideHotkeyGuide": true
         }
       ],
-      "scroll preview up": [],
-      "scroll preview down": [],
+      "scroll preview up": [
+        {
+          "modifiers": [
+            "Alt"
+          ],
+          "key": "v",
+          "hideHotkeyGuide": false
+        }
+      ],
+      "scroll preview down": [
+        {
+          "modifiers": [
+            "Mod"
+          ],
+          "key": "v",
+          "hideHotkeyGuide": false
+        }
+      ],
       "dismiss": [
         {
           "modifiers": [
@@ -709,9 +759,9 @@
       "allowFuzzySearchForSearchTarget": false,
       "minFuzzyMatchScore": 0.5,
       "targetExtensions": [],
-      "includeCurrentFile": false,
+      "includeCurrentFile": true,
       "floating": false,
-      "autoPreview": false,
+      "autoPreview": true,
       "autoPreviewDelayMilliSeconds": 300,
       "showFrontMatter": false,
       "excludeFrontMatterKeys": [
@@ -724,7 +774,7 @@
       ],
       "defaultInput": "",
       "restoreLastInput": false,
-      "commandPrefix": ":l ",
+      "commandPrefix": "",
       "sortPriorities": [
         "Prefix name match",
         "Name match",
@@ -764,7 +814,7 @@
   "maxDisplayLengthAroundMatchedWord": 64,
   "includeFilenameInGrepSearch": false,
   "defaultGrepFolder": "",
-  "autoPreviewInGrepSearch": false,
+  "autoPreviewInGrepSearch": true,
   "grepAutoPreviewDelayMilliSeconds": 300,
   "autoPreviewInBacklinkSearch": false,
   "backlinkAutoPreviewDelayMilliSeconds": 300,

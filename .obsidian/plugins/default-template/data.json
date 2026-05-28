@@ -1,0 +1,10 @@
+{
+  "defaultTemplate": "roam/template/tags模板.md",
+  "folderTemplates": {
+    "roam": "roam/template/tags模板.md"
+  },
+  "ignorePaths": [
+    "roam/assets",
+    "roam/template"
+  ]
+}
