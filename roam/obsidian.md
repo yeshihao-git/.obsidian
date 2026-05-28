@@ -3,55 +3,27 @@ tags:
   - tools
 ---
 # 1 环境配置
-## 1.1 图片相关
-### 1.1.1 设置图片存放文件夹
+## 1.1 配置、插件
 
-1. 设置 - 文件与链接 - 附件默认存放路径 - 当前文件所在文件夹下指定的子文件夹
-2. 子文件夹名称 设置为 `assets`
+.obsidian 文件夹为我的 obsidian 相关配置，将它放入自己的笔记文件夹中，按以下方式打开即可得到与我相同的配置、插件
+1. 左下角打开 管理仓库
+![[Pasted image 20260528144406.png|321]]
+2. 选择 打开本地仓库
+![[Pasted image 20260528144412.png|389]]
+3. 选择自己的 笔记文件夹
 
-### 1.1.2 自动清理未使用图片
-
-1. 设置 - 第三方插件 - 安全模式 - 关闭
-2. 社区插件市场 - `Clear Unused Images`
-3. 修改 `Clear Unused Images` 选项
-![[Pasted image 20260511114300.png|524]]
-4. 在命令面板使用
-
-## 1.2 标题自动编号
-
-1. 下载插件 `Number Headings`
-2. 设置如下
-![[Pasted image 20260511114956.png|413]]
-
-## 1.3 给表格加上横向滑动条
-
-1. 设置 - 外观 - CSS代码片段
-![[Pasted image 20260416105633.png]]
-2. 选择文件夹，新建 css 文件，写入以下内容
-```css
-.markdown-source-view div.cm-embed-block.cm-table-widget {
-    overflow-x: auto;
-}
-.markdown-source-view div.cm-embed-block.cm-table-widget > div > table {
-    width: max-content !important;
-}
-.markdown-reading-view .markdown-preview-view.markdown-rendered table {
-    width: max-content !important;
-}
-```
-3. 开启 table-scroll 后刷新
-
-# 2 快捷键
+## 1.2 快捷键
 
 | 作用    | 快捷键          |
 | ----- | ------------ |
 | 搜索文件  | `C-o`        |
 | 执行命令  | `C-p`        |
+| 新建任务  | `C-t`        |
 | 切换标签页 | `C-<数字>`     |
 | 多光标   | `Alt-<鼠标左键>` |
 
-# 3 语法
-## 3.1 markdown 书写规范
+# 2 语法
+## 2.1 markdown 书写规范
 
 **空行**：
 1. 标题前后各空一行
@@ -61,7 +33,7 @@ tags:
 1. 中文内容中的英文和数字前后加空格
 2. 粗体、斜体、高亮文本前后加空格
 
-## 3.2 基础
+## 2.2 基础
 
 ```cpp
 # <标题>            // 标题（1-6级）
@@ -88,20 +60,20 @@ tags:
 ```
 
 **CallOut 官方支持如下**：
-- note
-- abstract, summary, tldr
-- info, todo
-- tip, hint, important
-- success, check, done
-- question, help, faq
-- warning, caution, attention
-- failure, fail, missing
-- danger, error
-- bug
-- example
-- quote, cite
+- `note`
+- `abstract`, `summary`, `tldr`
+- `info`, `todo`
+- `tip`, `hint`, `important`
+- `success`, `check`, `done`
+- `question`, `help`, `faq`
+- `warning`, `caution`, `attention`
+- `failure`, `fail`, `missing`
+- `danger`, `error`
+- `bug`
+- `example`
+- `quote`, `cite`
 
-## 3.3 内部链接
+## 2.3 内部链接
 
 ```cpp
 [[<文件>]]          // 链接到文件
@@ -112,26 +84,14 @@ tags:
 ![[<链接>]]         // 将链接内容嵌入到当前笔记
 ```
 
-## 3.4 笔记属性
+## 2.4 笔记属性
 
 设置 - 编辑器 - 笔记属性 -> 显示
 ```cpp
 ---       // 文件开头添加笔记属性
 ```
 
-## 3.5 自定义 CSS 样式
-
-`ctrl + shift + i` 
-
-# 4 关系图谱与笔记联动
-
-实现左侧点击关系图谱中节点时，右侧自动显示对应笔记
-1. 打开关系图谱
-2. 右上角选择 左右分屏
-3. 右键 关系图谱标签页 选择 锁定
-
-
-# 5 数学（latex）
+## 2.5 latex
 
 | 类型   | 语法        | 示例                     | 渲染效果               |
 | ---- | --------- | ---------------------- | ------------------ |
@@ -157,3 +117,7 @@ tags:
 | 矩阵   | `$$\begin{pmatrix}1&2\\3&4\end{pmatrix}$$`         | $\begin{pmatrix}1&2\\3&4\end{pmatrix}$          |
 | 行列式  | `$$\begin{vmatrix}a&b\\c&d\end{vmatrix}$$`         | $\begin{vmatrix}a&b\\c&d\end{vmatrix}$          |
 | 分段函数 | `$$f(x)=\begin{cases}x&x\ge0\\-x&x<0\end{cases}$$` | $f(x)=\begin{cases}x&x\ge0\\-x&x<0\end{cases}$​ |
+
+# 3 自定义 CSS 样式
+
+`ctrl + shift + i` 

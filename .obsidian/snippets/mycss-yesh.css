@@ -1,10 +1,80 @@
-/* 表格横向滚动 */
+/* ===============================表格=============================== */
+/* 表格 向滚动条 */
 .markdown-source-view div.cm-embed-block.cm-table-widget {
     overflow-x: auto;
 }
-.markdown-source-view div.cm-embed-block.cm-table-widget > div > table {
+
+.markdown-source-view div.cm-embed-block.cm-table-widget>div>table {
     width: max-content !important;
 }
+
 .markdown-reading-view .markdown-preview-view.markdown-rendered table {
     width: max-content !important;
+}
+
+/* ===============================列表=============================== */
+/* 有序、无序列表 去掉前缩进 */
+.cm-formatting-list-ul,
+.cm-formatting-list-ol {
+    font-variant-numeric: tabular-nums;
+    padding-inline-start: unset;
+}
+
+/* 有序列表 颜色 */
+.cm-formatting-list-ol {
+    color: #0953f2 !important;
+}
+
+/* 无序列表 颜色 */
+.list-bullet::after {
+    background-color: #ff5555 !important;
+}
+
+/* 任务列表 去掉前缩进 */
+.markdown-source-view.mod-cm6 .task-list-label .task-list-item-checkbox {
+    margin-inline-start: unset;
+    margin-inline-end: unset;
+}
+
+/* 任务列表 改成圆形 */
+input[type="checkbox"] {
+    border-radius: 50% !important;
+}
+
+/* ===============================标题=============================== */
+/* 笔记标题 字体色 */
+.inline-title {
+    color: #E64553 !important;
+}
+
+/* 1-6级标题 字体色 */
+.cm-header-1 {
+    color: #E64553 !important;
+}
+
+.cm-header-2 {
+    color: #FE640C !important;
+}
+
+.cm-header-3 {
+    color: #DF8E1D !important;
+}
+
+.cm-header-4 {
+    color: #40A02B !important;
+}
+
+.cm-header-5 {
+    color: #2166F6 !important;
+}
+
+.cm-header-6 {
+    color: #8938EF !important;
+}
+
+/* ===============================代码块=============================== */
+/* 代码块、内联代码块 背景色 */
+.HyperMD-codeblock,
+.cm-inline-code {
+    background-color: #f2f8ff !important;
 }

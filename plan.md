@@ -21,9 +21,8 @@ kanban-plugin: board
 
 ## 今日进行中
 
-- [ ] obsidian：[QuickAdd笔记编写](https://www.bilibili.com/video/BV1cH4y1Q7ou?vd_source=4441bc96046659b39d059d583f36ff52&spm_id_from=333.788.videopod.sections)
-- [ ] obsidian配置
 - [ ] obsidian样式设置
+- [ ] 收拾东西
 - [ ] 毕业相关材料编写
 	- [x] 答辩记录与学位授予决议
 	- [x] 修改落实情况
@@ -31,12 +30,12 @@ kanban-plugin: board
 	- [x] 论文查重查ai查格式，提交
 	- [ ] 打印两份 原创性声明
 	- [ ] 论文打印胶装
-- [ ] 收拾东西
 
 
 ## 完成
 
 **Complete**
+- [x] obsidian配置
 
 
 

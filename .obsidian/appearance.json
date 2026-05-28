@@ -3,5 +3,6 @@
     "table-scroll",
     "mycss-yesh"
   ],
-  "accentColor": "#5ca6f5"
+  "accentColor": "#fcb6d8",
+  "theme": "moonstone"
 }
