@@ -1,6 +1,6 @@
 ---
 tags:
-  - tools
+  - 工具
 ---
 # 1 设置emacs键位
 

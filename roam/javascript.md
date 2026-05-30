@@ -1,6 +1,7 @@
 ---
 tags:
   - js
+  - 前端
 ---
 # JavaScript 是单线程的
 

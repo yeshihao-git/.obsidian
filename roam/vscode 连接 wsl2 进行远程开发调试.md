@@ -1,6 +1,6 @@
 ---
 tags:
-  - tools
+  - 工具
   - vscode
 ---
 # 1 环境搭建
